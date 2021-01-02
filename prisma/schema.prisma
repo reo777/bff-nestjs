@@ -8,7 +8,7 @@ generator client {
 }
 
 model Task {
-  id        Int      @id
+  id        Int      @id @default(autoincrement())
   title     String
   createdAt DateTime
   done      Boolean

@@ -11,7 +11,10 @@ export class TaskService {
   }
 
   async getAllTasks(): Promise<Task[]> {
-    return this.prisma.task.findMany();
+    const res = await this.prisma.task.findMany();
+    console.log(res);
+
+    return res;
   }
 
   async getOneTask(id: number): Promise<Task> {

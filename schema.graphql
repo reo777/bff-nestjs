@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Task {
+  id: Int!
+  title: String!
+  done: Boolean!
+  userId: Int
+}
+
+type Query {
+  author(id: Int!): Task!
+  allTasks: [Task!]!
+}

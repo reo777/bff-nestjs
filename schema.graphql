@@ -10,6 +10,18 @@ type Task {
 }
 
 type Query {
-  author(id: Int!): Task!
   allTasks: [Task!]!
+}
+
+type Mutation {
+  createTask(data: TaskInputType!): Task!
+  updateTask(data: TaskInputType!, id: Float!): Task!
+  deleteTask(id: Float!): Task!
+}
+
+input TaskInputType {
+  id: Int!
+  title: String!
+  done: Boolean!
+  userId: Int
 }

@@ -8,17 +8,16 @@ generator client {
 }
 
 model Task {
-  id        Int      @id @default(autoincrement())
-  title     String
-  createdAt DateTime
-  done      Boolean
+  id    Int     @id @default(autoincrement())
+  title String
+  done  Boolean
 
-  User   User? @relation(fields: [userId], references: [id])
-  userId Int?
+  // User   User? @relation(fields: [userId], references: [id])
+  // userId Int?
 }
 
-model User {
-  id    Int    @id @default(autoincrement())
-  name  String
-  tasks Task[]
-}
+// model User {
+//   id    Int    @id @default(autoincrement())
+//   name  String
+//   tasks Task[]
+// }

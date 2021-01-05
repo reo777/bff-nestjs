@@ -8,10 +8,10 @@ import { TaskInputType } from '../dto/task.dto';
 export class TaskResolver {
   constructor(@Inject(TaskService) private taskService: TaskService) {}
 
-  // @Query((_returns) => Task)
-  // async task(@Args('id', { type: () => Int }) id: number): Promise<Task> {
-  //   return await this.taskService.getOneTask();
-  // }
+  @Query((_returns) => Task)
+  async task(@Args('id') id: number) {
+    return await this.taskService.getOneTask(id);
+  }
 
   @Query((_returns) => [Task])
   async allTasks(@Parent() task: Task) {

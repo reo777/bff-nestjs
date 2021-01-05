@@ -15,6 +15,8 @@ export class TaskService {
 
   async getAllTasks(): Promise<Task[]> {
     const res = await this.prisma.task.findMany();
+    console.log(res);
+
     return res;
   }
 

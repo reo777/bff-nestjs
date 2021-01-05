@@ -10,6 +10,7 @@ type Task {
 }
 
 type Query {
+  task(id: Float!): Task!
   allTasks: [Task!]!
 }
 
